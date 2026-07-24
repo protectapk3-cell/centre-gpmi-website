@@ -7,8 +7,6 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
         body { color: #333; line-height: 1.6; background-color: #f4f7f6; padding-top: 80px; }
-        
-        /* FIXED HEADER CODE */
         header { 
             background-color: #0a2540; 
             padding: 20px; 
@@ -25,12 +23,13 @@
         .logo { color: #fff; font-weight: bold; font-size: 24px; }
         nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; }
         nav a:hover { color: #00d4b2; }
-        
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        h1, h2 { color: #0a2540; margin-bottom: 20px; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        h1, h2, h3 { color: #0a2540; margin-bottom: 20px; }
         .box { background: white; padding: 35px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
-        .vision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
-        .vision-card { background: #f9f9f9; padding: 20px; border-top: 4px solid #0a2540; border-radius: 4px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #0a2540; }
+        .theme-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; list-style: none; }
+        .theme-item { background: #fff; padding: 15px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); border-left: 4px solid #00d4b2; }
         footer { background-color: #0a2540; color: white; padding: 40px 20px; text-align: center; margin-top: 60px; }
     </style>
 </head>
@@ -52,22 +51,39 @@
         <h1>About Centre-GPMI</h1>
         
         <div class="box">
-            <h2>Our Origin & Mission</h2>
-            <p>The Centre for Genomics and Precision Medicine Initiatives (Centre-GPMI) is a registered non-governmental organization established to pioneer cutting-edge genomic research and clinical precision medicine applications within Nigeria and across the broader African continent [1].</p>
-            <br>
-            <p>Our core focus is to address the severe underrepresentation of African genetic data in global healthcare studies, creating personalized medical frameworks that directly improve clinical outcomes for local populations.</p>
+            <h2>Organizational Overview</h2>
+            <p>The Centre for Health Genomics and Precision Medicine Initiatives (Centre-GPMI) is an independent, non-profit, non-partisan, non-governmental organization dedicated to advancing genomics, precision medicine, and evidence-based public health within healthcare systems, research, policy, and community development. We operate at the intersection of biomedical science, public health, and technology.</p>
         </div>
 
-        <div class="vision-grid">
-            <div class="vision-card">
+        <div class="grid">
+            <div class="card">
                 <h3>Our Vision</h3>
-                <p style="margin-top: 10px; font-size: 15px; color: #555;">To be the leading hub for genomic innovation in Africa, where precision medicine transforms routine patient care and eradicates health inequalities.</p>
+                <p>A future in which genomics, precision medicine, and evidence-based public health transform healthcare systems, enabling every individual and community to achieve the highest attainable standard of health through predictive, preventive, personalised, and equitable care.</p>
             </div>
-            <div class="vision-card">
-                <h3>Our Strategy</h3>
-                <p style="margin-top: 10px; font-size: 15px; color: #555;">By building strategic partnerships with international researchers, training local data scientists, and advising public health policymakers on genetic medicine infrastructure.</p>
+            <div class="card">
+                <h3>Our Mission</h3>
+                <p>To advance the responsible integration of genomics, precision medicine, and evidence-based public health into healthcare systems through research, innovation, education, policy development, institutional strengthening, and community engagement.</p>
             </div>
         </div>
+
+        <div class="box">
+            <h3>Our Core Values</h3>
+            <p>Our identity and actions are guided by: Scientific Excellence, Integrity, Innovation, Equity, Collaboration, Community-Centred Service, Respect for Human Dignity, Accountability, Professionalism, and Sustainability.</p>
+        </div>
+
+        <h2>Thematic Areas of Focus</h2>
+        <ul class="theme-list" style="margin-top: 20px;">
+            <li class="theme-item">Genomics and Genomic Research</li>
+            <li class="theme-item">Precision Medicine and Precision Public Health</li>
+            <li class="theme-item">Health Systems Strengthening</li>
+            <li class="theme-item">Disease Prevention and Control</li>
+            <li class="theme-item">Health Policy and Governance</li>
+            <li class="theme-item">Molecular Epidemiology & Genomic Surveillance</li>
+            <li class="theme-item">Bioinformatics and Digital Health</li>
+            <li class="theme-item">Biosecurity, Biosafety & Emergency Preparedness</li>
+            <li class="theme-item">Capacity Building & Workforce Development</li>
+            <li class="theme-item">Health Education & Community Engagement</li>
+        </ul>
     </div>
 
     <footer>
