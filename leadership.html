@@ -6,22 +6,34 @@
     <title>Centre-GPMI | Leadership</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
-        body { color: #333; line-height: 1.6; background-color: #f4f7f6; }
-        header { background-color: #0a2540; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        body { color: #333; line-height: 1.6; background-color: #f4f7f6; padding-top: 80px; }
+        header { 
+            background-color: #0a2540; 
+            padding: 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            z-index: 1000; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
         .logo { color: #fff; font-weight: bold; font-size: 24px; }
-        nav a { color: #fff; text-decoration: none; margin-left: 20px; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; }
         nav a:hover { color: #00d4b2; }
         .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
         h1 { text-align: center; color: #0a2540; margin-bottom: 40px; }
         h2 { color: #0a2540; border-bottom: 3px solid #00d4b2; padding-bottom: 10px; margin: 40px 0 20px; }
-        .director-profile { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; gap: 30px; align-items: center; }
-        .director-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; background-color: #ddd; }
+        .director-profile { background: white; padding: 35px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; gap: 35px; align-items: flex-start; }
+        .director-img { width: 220px; height: auto; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
         .card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; background-color: #ddd; }
         .role { color: #00d4b2; font-weight: bold; font-size: 14px; text-transform: uppercase; margin-bottom: 10px; }
         footer { background-color: #0a2540; color: white; padding: 40px 20px; text-align: center; margin-top: 60px; }
-        @media(max-width: 768px) { .director-profile { flex-direction: column; text-align: center; } }
+        @media(max-width: 768px) { .director-profile { flex-direction: column; text-align: center; align-items: center; } }
     </style>
 </head>
 <body>
@@ -30,48 +42,53 @@
         <div class="logo">Centre-GPMI</div>
         <nav>
             <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
             <a href="leadership.html">Leadership</a>
+            <a href="research.html">Research & Publications</a>
             <a href="news.html">News & Gallery</a>
             <a href="contact.html">Contact & Donate</a>
         </nav>
     </header>
 
     <div class="container">
-        <h1>Our Leadership</h1>
+        <h1>Governance & Leadership</h1>
 
-        <h2>Executive Director</h2>
+        <h2>Founder & Executive Director</h2>
         <div class="director-profile">
-            <img src="https://unsplash.com" alt="Executive Director" class="director-img">
+            <!-- RENDER CUSTOM UPLOADED AVATAR FROM THE CHAT INTERFACE -->
+            <img src="https://unsplash.com" alt="Dr. Yohanna Musa Usman" class="director-img">
             <div>
-                <h3>[Director Name]</h3>
-                <p class="role">Executive Director / Founder</p>
-                <p>Provide a detailed profile of the Executive Director here. Talk about their academic vision, professional background in genomics, and core responsibilities in leading Centre-GPMI's strategic goals across Nigeria.</p>
+                <h3 style="font-size: 24px; margin-bottom: 5px;">Dr. Yohanna Musa Usman</h3>
+                <p style="font-size: 15px; color: #555; font-weight: 600; margin-bottom: 15px;">MBBS • M.Sc. • Ph.D. • FMCA — Founder & Executive Director</p>
+                <p style="margin-bottom: 15px;">Dr. Yohanna Musa Usman is a physician-scientist, consultant anaesthetist, and genomics researcher with a distinguished career spanning clinical medicine, biomedical research, and precision healthcare. He earned his Bachelor of Medicine, Bachelor of Surgery (MBBS) from the University of Maiduguri before pursuing postgraduate studies in Human Anatomy at the University of Jos, where he obtained both a Master of Science (M.Sc.) and a Doctor of Philosophy (Ph.D.) with specialization in Human Genomics.</p>
+                <p style="margin-bottom: 15px;">He also completed specialist residency training in Anaesthesia, Critical Care, and Pain Management at Jos University Teaching Hospital and was awarded the Fellowship of the Medical College of Anaesthetists (FMCA).</p>
+                <p>Drawing on this multidisciplinary background, Dr. Usman’s work integrates clinical practice with research in human genomics, molecular genetics, pharmacogenomics, bioinformatics, molecular diagnostics, and precision medicine.</p>
             </div>
         </div>
 
         <h2>Board of Trustees</h2>
         <div class="grid">
             <div class="card">
-                <img src="https://unsplash.com" alt="Trustee 1">
-                <h3>[Trustee Name 1]</h3>
+                <img src="https://unsplash.com" alt="Trustee">
+                <h3>To Be Announced</h3>
                 <p class="role">Trustee Board Member</p>
-                <p>Brief professional background overview emphasizing legal, financial, or NGO governance expertise.</p>
+                <p>Safeguarding the mission, approving major institutional policies, and ensuring full regulatory compliance.</p>
             </div>
             <div class="card">
-                <img src="https://unsplash.com" alt="Trustee 2">
-                <h3>[Trustee Name 2]</h3>
+                <img src="https://unsplash.com" alt="Trustee">
+                <h3>To Be Announced</h3>
                 <p class="role">Trustee Board Member</p>
-                <p>Brief professional background overview emphasizing medical research advocacy or corporate governance.</p>
+                <p>Providing independent strategic, financial, and fiduciary oversight across the Centre's structural programs.</p>
             </div>
         </div>
 
         <h2>Scientific Advisory Board Chairmen</h2>
         <div class="grid">
             <div class="card">
-                <img src="https://unsplash.com" alt="Chairman 1">
-                <h3>[Chairman Name]</h3>
+                <img src="https://unsplash.com" alt="Scientific Chair">
+                <h3>To Be Announced</h3>
                 <p class="role">Scientific Board Chair</p>
-                <p>Highlight their clinical specialisations, medical genomics milestones, and academic/institutional affiliations.</p>
+                <p>Providing independent scientific guidance, research protocol validation, and advisory support to Executive Management.</p>
             </div>
         </div>
     </div>
