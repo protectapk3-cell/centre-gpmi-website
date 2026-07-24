@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centre-GPMI | Contact & Donate</title>
+    <!-- Animation Stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com" />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
-        body { color: #333; line-height: 1.6; background-color: #f4f7f6; padding-top: 80px; }
+        body { 
+            color: #333; 
+            line-height: 1.6; 
+            background-color: #f4f7f6; 
+            padding-top: 80px; 
+            /* LOGO WATERMARK EFFECT */
+            background-image: url('logo.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: 45%;
+        }
         header { 
             background-color: #0a2540; 
             padding: 20px; 
@@ -21,13 +34,23 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .logo { color: #fff; font-weight: bold; font-size: 24px; }
-        nav a { color: #fff; text-decoration: none; margin-left: 20px; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; }
         nav a:hover { color: #00d4b2; }
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        h1, h2 { color: #0a2540; margin-bottom: 20px; }
-        .box { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
-        .btn-donate { display: inline-block; background-color: #00d4b2; color: #0a2540; padding: 15px 35px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 18px; margin-top: 15px; }
-        .btn-donate:hover { background-color: #05bfa1; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; position: relative; z-index: 2; }
+        h1, h2, h3 { color: #0a2540; margin-bottom: 20px; }
+        .box { background: rgba(255, 255, 255, 0.95); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        
+        /* INTERACTIVE BUTTONS STYLES */
+        .contact-actions { display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
+        .btn-action { display: inline-flex; align-items: center; justify-content: center; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; color: white; transition: transform 0.2s ease, background-color 0.2s ease; font-size: 15px; }
+        .btn-action:hover { transform: translateY(-2px); }
+        .btn-call { background-color: #007bff; }
+        .btn-call:hover { background-color: #0056b3; }
+        .btn-whatsapp { background-color: #25d366; }
+        .btn-whatsapp:hover { background-color: #1ebd57; }
+        
+        .btn-donate { display: inline-block; background-color: #00d4b2; color: #0a2540; padding: 15px 35px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 18px; margin-top: 15px; transition: transform 0.2s ease; }
+        .btn-donate:hover { transform: translateY(-2px); }
         .bank-details { background-color: #f9f9f9; padding: 20px; border-left: 4px solid #0a2540; margin-top: 15px; border-radius: 0 4px 4px 0; }
         footer { background-color: #0a2540; color: white; padding: 40px 20px; text-align: center; margin-top: 60px; }
     </style>
@@ -47,38 +70,43 @@
     </header>
 
     <div class="container">
-        <h1>Support & Contact Us</h1>
+        <h1 data-aos="fade-down">Support & Contact Us</h1>
 
-        <div class="box">
+        <div class="box" data-aos="fade-up" data-aos-duration="800">
             <h2>Head Office Location</h2>
             <p>Centre for Health Genomics and Precision Medicine Initiatives (Centre-GPMI),<br>
             Engr. Datum Barau Close, Opposite Shadorc Bakery,<br>
             Zarmaganda-Rayfield Road, Jos, Plateau State, Nigeria.</p>
             <br>
-            <p><strong>Telephone:</strong> +234 806 481 7431<br>
-            <strong>WhatsApp:</strong> +234 806 372 8688<br>
+            <p><strong>Official Email:</strong> contact@centregpmi.org.ng<br>
             <strong>Office Hours:</strong> Monday to Friday (8:00 a.m. to 5:00 p.m.)</p>
+            
+            <!-- CLICKABLE ACTION BUTTONS -->
+            <div class="contact-actions">
+                <a href="tel:+2348064817431" class="btn-action btn-call">📞 Call Office</a>
+                <a href="https://wa.me" class="btn-action btn-whatsapp" target="_blank">💬 WhatsApp Chat</a>
+            </div>
         </div>
 
-        <div class="box" style="text-align: center;">
+        <div class="box" style="text-align: center;" data-aos="fade-up" data-aos-delay="100">
             <h2>Support Precision Medicine in Africa</h2>
             <p>Your financial contributions directly support core genomics awareness campaigns, subsidised population screening, and regional molecular data analysis workflows.</p>
             <a href="#" class="btn-donate" target="_blank">Donate Online Instantly</a>
         </div>
 
-        <div class="box">
+        <div class="box" data-aos="fade-up" data-aos-delay="200">
             <h2>Direct FCMB Bank Account Details</h2>
             <p>For electronic fund transfers, local deposits, or direct wire routing, please make use of our verified organizational banking coordinates:</p>
             
             <div class="bank-details">
-                <strong style="color: #0a2540; font-size: 16px;">Nigerian Naira (NGN) Account:</strong><br style="margin-bottom: 5px;">
+                <strong style="color: #0a2540; font-size: 16px;">Nigerian Naira (NGN) Account:</strong><br>
                 <strong>Bank:</strong> First City Monument Bank (FCMB)<br>
                 <strong>Account Name:</strong> CFH GENOMICS & PRECISION MEDICINE INITIATIVES<br>
                 <strong>Account Number:</strong> 1045490732
             </div>
 
             <div class="bank-details">
-                <strong style="color: #0a2540; font-size: 16px;">Domiciliary US Dollar (USD) Account:</strong><br style="margin-bottom: 5px;">
+                <strong style="color: #0a2540; font-size: 16px;">Domiciliary US Dollar (USD) Account:</strong><br>
                 <strong>Bank:</strong> First City Monument Bank (FCMB)<br>
                 <strong>Account Name:</strong> CFH GENOMICS & PRECISION MEDICINE INITIATIVES<br>
                 <strong>Account Number:</strong> 2007930257
@@ -90,5 +118,10 @@
         <p>&copy; 2026 Centre-GPMI. All Rights Reserved.</p>
     </footer>
 
+    <!-- Motion Library Engine -->
+    <script src="https://unpkg.com"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
 </body>
 </html>
