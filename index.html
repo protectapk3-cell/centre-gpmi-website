@@ -20,7 +20,7 @@
         nav a:hover { color: #00d4b2; }
         .nav-login { background-color: #00d4b2; color: #0a2540 !important; padding: 6px 12px; border-radius: 4px; font-weight: bold; }
         .nav-login:hover { background-color: #05bfa1; }
-        .hero { background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), url('https://unsplash.com') no-repeat center center/cover; padding: 120px 20px; text-align: center; color: white; }
+        .hero { background: linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)), url('https://images.unsplash.com/photo-1681911046053-1d2fdce39ea0?fm=jpg&q=60&w=2000&auto=format&fit=crop') no-repeat center center/cover; padding: 120px 20px; text-align: center; color: white; }
         .hero h1 { font-size: 36px; margin-bottom: 20px; }
         .hero p { font-size: 18px; max-width: 800px; margin: 0 auto 30px; }
         .btn { display: inline-block; background-color: #00d4b2; color: #0a2540; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: transform 0.3s; }
@@ -30,7 +30,9 @@
         .quote-text { font-size: 18px; font-style: italic; line-height: 1.6; margin-bottom: 15px; }
         .quote-author { font-weight: bold; color: #00d4b2; font-size: 14px; text-transform: uppercase; }
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .feat-card { background: rgba(255, 255, 255, 0.95); padding: 35px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .feat-card { background: rgba(255, 255, 255, 0.95); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; }
+        .feat-img { width: 100%; height: 180px; object-fit: cover; }
+        .feat-body { padding: 25px; }
         footer { background-color: #0a2540; color: white; padding: 40px 20px; text-align: center; margin-top: 60px; }
     </style>
 </head>
@@ -52,7 +54,7 @@
     <section class="hero">
         <div data-aos="fade-up" data-aos-duration="1000">
             <h1>Centre for Health Genomics and Precision Medicine Initiatives</h1>
-            <p>GENOMICS. PRECISION. IMPACT.<br>Pioneering clinical research systems and equitable population screening metrics across Nigeria.</p>
+            <p>GENOMICS. PRECISION. IMPACT.<br>Advancing health genomics and precision medicine research, and translating scientific discovery into accessible, equitable health programmes across Nigeria and Africa.</p>
             <a href="contact.html" class="btn">Partner With Us</a>
         </div>
     </section>
@@ -66,14 +68,26 @@
         <h2 style="text-align: center; margin-bottom: 20px;" data-aos="fade-up">Institutional Objectives</h2>
         <div class="features-grid">
             <div class="feat-card" data-aos="fade-right">
-                <h3>Scientific Integration</h3>
-                <p style="margin-top: 10px; color: #555;">Bridging laboratory genetic findings into direct diagnostic treatments at local hospital bedsides.</p>
+                <img src="https://images.unsplash.com/photo-1576091160651-e028ca26a943?fm=jpg&q=60&w=1200&auto=format&fit=crop" alt="Scientific Integration" class="feat-img">
+                <div class="feat-body">
+                    <h3>Scientific Integration</h3>
+                    <p style="margin-top: 10px; color: #555;">Bridging laboratory genetic findings into direct diagnostic treatments at local hospital bedsides.</p>
+                </div>
             </div>
             <div class="feat-card" data-aos="fade-left">
-                <h3>Population Representation</h3>
-                <p style="margin-top: 10px; color: #555;">Ensuring African genetic diversity metrics are analyzed to eliminate global precision healthcare inequality.</p>
+                <img src="https://images.unsplash.com/photo-1764933361142-fc28a024f3da?fm=jpg&q=60&w=1200&auto=format&fit=crop" alt="Population Representation" class="feat-img">
+                <div class="feat-body">
+                    <h3>Population Representation</h3>
+                    <p style="margin-top: 10px; color: #555;">Ensuring African genetic diversity metrics are analyzed to eliminate global precision healthcare inequality.</p>
+                </div>
             </div>
         </div>
+    </section>
+    <section class="section" style="text-align: center;">
+        <h2 data-aos="fade-up">Get Involved</h2>
+        <p style="max-width: 700px; margin: 15px auto 30px; color: #555;">Whether you're a researcher, funder, healthcare institution, or community partner, there's a place for you in this work.</p>
+        <a href="contact.html" class="btn" style="margin-right: 15px;">Partner With Us</a>
+        <a href="research.html" class="btn" style="background-color: #0a2540; color: white;">Explore Our Research</a>
     </section>
     <footer><p>&copy; 2026 Centre-GPMI. All Rights Reserved.</p></footer>
     <script src="https://unpkg.com"></script>
