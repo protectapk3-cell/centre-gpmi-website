@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centre-GPMI | Contact & Donate</title>
+    <title>Centre-GPMI | Partner With Us</title>
     <link rel="stylesheet" href="https://unpkg.com" />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
@@ -19,19 +19,35 @@
         nav a { color: #fff; text-decoration: none; margin-left: 15px; font-weight: 500; font-size: 15px; }
         nav a:hover { color: #00d4b2; }
         .nav-login { background-color: #00d4b2; color: #0a2540 !important; padding: 6px 12px; border-radius: 4px; font-weight: bold; }
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; position: relative; z-index: 2; }
+        
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; position: relative; z-index: 2; }
         h1, h2 { color: #0a2540; margin-bottom: 20px; }
-        .box { background: rgba(255, 255, 255, 0.95); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; }
-        .contact-actions { display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
-        .btn-action { display: inline-flex; align-items: center; justify-content: center; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; color: white; transition: transform 0.2s ease; font-size: 15px; }
+        .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
+        .box { background: rgba(255, 255, 255, 0.96); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        
+        /* INTERACTIVE BUTTONS */
+        .contact-actions { display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap; }
+        .btn-action { display: inline-flex; align-items: center; justify-content: center; padding: 12px 22px; border-radius: 5px; text-decoration: none; font-weight: bold; color: white; transition: transform 0.2s ease; font-size: 14px; }
+        .btn-action:hover { transform: translateY(-2px); }
         .btn-call { background-color: #007bff; }
         .btn-whatsapp { background-color: #25d366; }
-        .btn-donate { display: inline-block; background-color: #00d4b2; color: #0a2540; padding: 15px 35px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 18px; margin-top: 15px; transition: transform 0.2s ease; }
-        .bank-details { background-color: #f9f9f9; padding: 20px; border-left: 4px solid #0a2540; margin-top: 15px; }
+        
+        /* DYNAMIC FORM FIELDS */
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; color: #0a2540; font-size: 14px; }
+        input, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; outline: none; }
+        input:focus, textarea:focus { border-color: #00d4b2; }
+        .btn-submit { width: 100%; background: #0a2540; color: white; padding: 14px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+        .btn-submit:hover { background: #00d4b2; color: #0a2540; }
+        
+        /* GOOGLE MAPS IFRAME BOX */
+        .map-container { width: 100%; height: 250px; margin-top: 20px; border-radius: 6px; overflow: hidden; border: 1px solid #ddd; }
         footer { background-color: #0a2540; color: white; padding: 40px 20px; text-align: center; margin-top: 60px; }
+        @media(max-width: 768px) { .split-layout { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+
     <header>
         <a href="index.html" class="logo-text">Centre-GPMI</a>
         <nav>
@@ -39,41 +55,72 @@
             <a href="who-we-are.html">Who We Are</a>
             <a href="what-we-do.html">What We Do</a>
             <a href="leadership.html">Leadership</a>
+            <a href="partners.html">Partners</a>
             <a href="research.html">Research</a>
             <a href="news.html">News</a>
-            <a href="contact.html">Contact & Donate</a>
+            <a href="contact.html">Partner With Us</a>
             <a href="login.html" class="nav-login">Staff Login 🔒</a>
         </nav>
     </header>
+
     <div class="container">
-        <h1 data-aos="fade-down">Support & Contact Us</h1>
-        <div class="box" data-aos="fade-up">
-            <h2>Head Office Location</h2>
-            <p>Centre for Health Genomics and Precision Medicine Initiatives (Centre-GPMI),<br>Engr. Datum Barau Close, Opposite Shadorc Bakery,<br>Zarmaganda-Rayfield Road, Jos, Plateau State, Nigeria.</p>
-            <br>
-            <p><strong>Official Email:</strong> contact@centregpmi.org.ng<br><strong>Office Hours:</strong> Monday to Friday (8:00 a.m. to 5:00 p.m.)</p>
-            <div class="contact-actions">
-                <a href="tel:+2348064817431" class="btn-action btn-call">📞 Call Office</a>
-                <a href="https://wa.me" class="btn-action btn-whatsapp" target="_blank">💬 WhatsApp Chat</a>
+        <h1 data-aos="fade-down">Partner With Us</h1>
+        
+        <div class="split-layout">
+            
+            <!-- LEFT COLUMN: SYSTEM INTERACTION FORM -->
+            <div class="box" data-aos="fade-right">
+                <h2>Let's Have a Conversation</h2>
+                <p style="color: #666; margin-bottom: 20px; font-size: 15px;">Fill out the form below, and our leadership board will contact you directly via email to explore collaboration alignments.</p>
+                
+                <!-- AUTOMATED PUBLIC EMAIL POST OFFICE SYSTEM ROUTER -->
+                <form action="https://web3forms.com" method="POST">
+                    <!-- FREE DEPLOYMENT ROUTING KEY SECURED FOR CFH GENOMICS -->
+                    <input type="hidden" name="access_key" value="09be6716-1f37-4f6c-b71f-df772f7bfb80">
+                    <input type="hidden" name="subject" value="New Partnership Request - Centre-GPMI">
+                    
+                    <div class="form-group">
+                        <label>Your Name / Institution</label>
+                        <input type="text" name="name" placeholder="E.g., University of Jos / Dr. Smith" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="partner@domain.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Proposed Area of Collaboration</label>
+                        <textarea name="message" rows="4" placeholder="Tell us how you would like to work with Centre-GPMI..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Proposal</button>
+                </form>
             </div>
-        </div>
-        <div class="box" style="text-align: center;" data-aos="fade-up">
-            <h2>Support Precision Medicine in Africa</h2>
-            <p>Your financial contributions directly support core genomics awareness campaigns, subsidised population screening, and regional molecular data analysis workflows.</p>
-            <a href="https://paystack.com" class="btn-donate" target="_blank">Donate Online Instantly</a>
-        </div>
-        <div class="box" data-aos="fade-up">
-            <h2>Direct FCMB Bank Account Details</h2>
-            <div class="bank-details">
-                <strong>Nigerian Naira (NGN) Account:</strong><br><strong>Bank:</strong> First City Monument Bank (FCMB)<br><strong>Account Name:</strong> CFH GENOMICS & PRECISION MEDICINE INITIATIVES<br><strong>Account Number:</strong> 1045490732
+
+            <!-- RIGHT COLUMN: OFFICE DETAILS & INTERACTIVE PHONE LINKS -->
+            <div class="box" data-aos="fade-left">
+                <h2>Our Location & Coordinates</h2>
+                <p>Centre for Health Genomics and Precision Medicine Initiatives (Centre-GPMI),<br>
+                Engr. Datum Barau Close, Opposite Shadorc Bakery,<br>
+                Zarmaganda-Rayfield Road, Jos, Plateau State, Nigeria.</p>
+                
+                <div class="contact-actions">
+                    <a href="tel:+2348064817431" class="btn-action btn-call">📞 Call Office</a>
+                    <a href="https://wa.me" class="btn-action btn-whatsapp" target="_blank">💬 WhatsApp Chat</a>
+                </div>
+
+                <!-- EMBEDDED GOOGLE MAPS PIN SOURCED FOR JOS HEADQUARTERS PLATFORM -->
+                <div class="map-container">
+                    <iframe src="https://google.com" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
-            <div class="bank-details">
-                <strong>Domiciliary US Dollar (USD) Account:</strong><br><strong>Bank:</strong> First City Monument Bank (FCMB)<br><strong>Account Name:</strong> CFH GENOMICS & PRECISION MEDICINE INITIATIVES<br><strong>Account Number:</strong> 2007930257
-            </div>
+
         </div>
     </div>
+
     <footer><p>&copy; 2026 Centre-GPMI. All Rights Reserved.</p></footer>
+
     <script src="https://unpkg.com"></script>
-    <script>AOS.init({ once: true });</script>
+    <script>
+        AOS.init({ once: true });
+    </script>
 </body>
 </html>
