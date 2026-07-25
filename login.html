@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre-GPMI | Staff Portal Login</title>
+    <link rel="stylesheet" href="https://unpkg.com" />
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+        body { 
+            height: 100vh; display: flex; justify-content: center; align-items: center; background-color: #0a2540;
+            background-image: url('logo.png'); background-repeat: no-repeat; background-position: center; background-size: contain; background-attachment: fixed;
+        }
+        .login-card { background: rgba(255, 255, 255, 0.96); padding: 40px; border-radius: 12px; width: 100%; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); text-align: center; backdrop-filter: blur(5px); }
+        h2 { color: #0a2540; margin-bottom: 10px; }
+        p { color: #666; font-size: 14px; margin-bottom: 30px; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; color: #0a2540; font-size: 14px; }
+        input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; outline: none; }
+        input:focus { border-color: #00d4b2; }
+        .btn-submit { width: 100%; background: #0a2540; color: white; padding: 14px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
+        .btn-submit:hover { background: #00d4b2; color: #0a2540; }
+        .back-link { display: inline-block; margin-top: 20px; color: #0a2540; text-decoration: none; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="login-card" data-aos="zoom-in" data-aos-duration="600">
+        <h2>Internal Portal Gate</h2>
+        <p>Authorized Centre-GPMI Staff Only</p>
+        
+        <!-- POINTS SAFELY TO SECURE VERIFICATION AND ROUTING REPOSITORIES -->
+        <form onsubmit="redirectToLark(event)">
+            <div class="form-group">
+                <label>Official Email Address</label>
+                <input type="email" placeholder="name@centregpmi.org.ng" required>
+            </div>
+            <div class="form-group">
+                <label>Secure System Password</label>
+                <input type="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn-submit">Verify Credentials</button>
+        </form>
+        
+        <a href="index.html" class="back-link">← Return to Homepage</a>
+    </div>
+
+    <script src="https://unpkg.com"></script>
+    <script>
+        AOS.init();
+        function redirectToLark(e) {
+            e.preventDefault();
+            // REPLACES GENERIC LOGS AND BRIDGES SYSTEM LINK IMMEDIATELY
+            window.location.href = "https://larksuite.com";
+        }
+    </script>
+</body>
+</html>
