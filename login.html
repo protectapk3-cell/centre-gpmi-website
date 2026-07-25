@@ -29,14 +29,13 @@
         <h2>Internal Portal Gate</h2>
         <p>Authorized Centre-GPMI Staff Only</p>
         
-        <!-- POINTS SAFELY TO SECURE VERIFICATION AND ROUTING REPOSITORIES -->
-        <form onsubmit="redirectToLark(event)">
+        <form onsubmit="redirectToSlack(event)">
             <div class="form-group">
-                <label>Official Email Address</label>
+                <label>Official Staff Email</label>
                 <input type="email" placeholder="name@centregpmi.org.ng" required>
             </div>
             <div class="form-group">
-                <label>Secure System Password</label>
+                <label>System Password</label>
                 <input type="password" placeholder="••••••••" required>
             </div>
             <button type="submit" class="btn-submit">Verify Credentials</button>
@@ -48,10 +47,10 @@
     <script src="https://unpkg.com"></script>
     <script>
         AOS.init();
-        function redirectToLark(e) {
+        function redirectToSlack(e) {
             e.preventDefault();
-            // REPLACES GENERIC LOGS AND BRIDGES SYSTEM LINK IMMEDIATELY
-            window.location.href = "https://larksuite.com";
+            // DIRECT LINK TO THE MAIN ENTRY SCREEN OF SLACK WORKSPACES
+            window.location.href = "https://slack.com";
         }
     </script>
 </body>
