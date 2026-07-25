@@ -4,63 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centre-GPMI | News & Gallery</title>
+    <link rel="stylesheet" href="https://unpkg.com" />
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
-        body { color: #333; line-height: 1.6; background-color: #f4f7f6; }
-        header { background-color: #0a2540; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { color: #fff; font-weight: bold; font-size: 24px; }
-        nav a { color: #fff; text-decoration: none; margin-left: 20px; }
+        body { 
+            color: #333; line-height: 1.6; background-color: #f4f7f6; padding-top: 90px; 
+            background-image: url('logo.png'); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: contain;
+        }
+        header { 
+            background-color: #0a2540; padding: 20px; display: flex; justify-content: space-between; align-items: center; 
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo-text { color: #fff; font-weight: bold; font-size: 22px; text-decoration: none; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; }
         nav a:hover { color: #00d4b2; }
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; position: relative; z-index: 2; }
         h1 { text-align: center; color: #0a2540; margin-bottom: 40px; }
         .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .news-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .news-card { background: rgba(255, 255, 255, 0.95); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .news-img { width: 100%; height: 220px; object-fit: cover; background-color: #ddd; }
         .news-content { padding: 20px; }
-        .date { color: #888; font-size: 12px; margin-bottom: 10px; }
-        .news-title { color: #0a2540; margin-bottom: 10px; font-size: 20px; }
         footer { background-color: #0a2540; color: white; padding: 40px 20px; text-align: center; margin-top: 60px; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">Centre-GPMI</div>
+        <a href="index.html" class="logo-text">Centre-GPMI</a>
         <nav>
             <a href="index.html">Home</a>
+            <a href="who-we-are.html">Who We Are</a>
+            <a href="what-we-do.html">What We Do</a>
             <a href="leadership.html">Leadership</a>
+            <a href="research.html">Research & Publications</a>
             <a href="news.html">News & Gallery</a>
             <a href="contact.html">Contact & Donate</a>
         </nav>
     </header>
 
     <div class="container">
-        <h1>Latest News & Photos</h1>
-        
+        <h1 data-aos="fade-down">Latest News & Gallery</h1>
         <div class="news-grid">
-            <div class="news-card">
-                <img src="https://unsplash.com" alt="News Image 1" class="news-img">
+            <div class="news-card" data-aos="zoom-in">
+                <img src="https://unsplash.com" alt="News" class="news-img">
                 <div class="news-content">
-                    <p class="date">July 24, 2026</p>
-                    <h3 class="news-title">Centre-GPMI Launches New Precision Medicine Initiative</h3>
-                    <p>Details about the launch event go here. Describe what happened, upcoming initiatives, and milestones achieved by the foundation.</p>
-                </div>
-            </div>
-
-            <div class="news-card">
-                <img src="https://unsplash.com" alt="News Image 2" class="news-img">
-                <div class="news-content">
-                    <p class="date">June 15, 2026</p>
-                    <h3 class="news-title">Annual Genomics Research Workshop Summary</h3>
-                    <p>Details about genomic educational updates or workshops hosted by the Scientific Advisory Board Chairmen can be summarized here.</p>
+                    <h3>Centre Launch Event</h3>
+                    <p style="margin-top: 10px; color: #666;">Pioneering updates and institutional frameworks deployment summary metrics.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Centre-GPMI. All Rights Reserved.</p>
-    </footer>
+    <footer><p>&copy; 2026 Centre-GPMI. All Rights Reserved.</p></footer>
 
+    <script src="https://unpkg.com"></script>
+    <script>AOS.init({ once: true });</script>
 </body>
 </html>
