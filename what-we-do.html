@@ -20,7 +20,17 @@
         nav a:hover { color: #00d4b2; }
         .container { max-width: 900px; margin: 40px auto; padding: 0 20px; position: relative; z-index: 2; }
         h1 { text-align: center; color: #0a2540; margin-bottom: 40px; }
-        
+
+        /* INTRO / WHY GENOMICS MATTERS */
+        .intro-box { background: rgba(255, 255, 255, 0.95); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; margin-bottom: 40px; }
+        .intro-img { width: 100%; height: 260px; object-fit: cover; display: block; }
+        .intro-body { padding: 35px; }
+        .intro-body h2 { color: #0a2540; margin-bottom: 15px; }
+        .intro-body p { color: #444; margin-bottom: 15px; }
+        .intro-body p:last-child { margin-bottom: 0; }
+
+        h3.section-label { text-align: center; color: #0a2540; margin-bottom: 25px; font-size: 22px; }
+
         /* INTERACTIVE ACCORDION PROGRAM LAYOUT */
         .accordion-item { background: rgba(255, 255, 255, 0.95); margin-bottom: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); overflow: hidden; }
         .accordion-header { background: #0a2540; color: white; padding: 20px; cursor: pointer; font-size: 18px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s; }
@@ -46,33 +56,45 @@
     </header>
 
     <div class="container">
-        <h1 data-aos="fade-down">Our Flagship Programmes</h1>
+        <h1 data-aos="fade-down">What We Do</h1>
+
+        <div class="intro-box" data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1681911046053-1d2fdce39ea0?fm=jpg&q=60&w=1600&auto=format&fit=crop" alt="Genomics and Precision Medicine" class="intro-img">
+            <div class="intro-body">
+                <h2>Why Genomics Matters for Every Patient</h2>
+                <p>No two patients are genetically identical, yet much of modern medicine still treats them as if they were — prescribing the same drug, at the same dose, for the same diagnosis, regardless of the person's underlying biology. Genomics changes that. By reading an individual's genetic code, clinicians can understand how that person is likely to respond to a specific treatment, what diseases they may be predisposed to, and how a condition is likely to progress in their body specifically.</p>
+                <p>This is the foundation of precision medicine: using genetic, environmental, and lifestyle information to move from broad, one-size-fits-all care toward treatment that is tailored to the individual. In practice, this means earlier and more accurate diagnosis, medications matched to a patient's genetic profile instead of trial-and-error prescribing, and prevention strategies built around a person's actual risk rather than population averages.</p>
+                <p>For Nigeria and Africa, this shift matters even more. Most of the world's genomic research and reference data has historically come from non-African populations, meaning precision medicine tools built elsewhere often don't translate well to African patients. Centre-GPMI exists to close that gap — generating African genomic data, building local capacity, and translating genomic science into programmes that reach real communities. The four flagship programmes below are how we're putting that mission into action.</p>
+            </div>
+        </div>
+
+        <h3 class="section-label" data-aos="fade-up">Our Flagship Programmes</h3>
         
         <div class="accordion-item" data-aos="fade-up">
             <div class="accordion-header" onclick="toggleAccordion(this)">Genomics & Precision Medicine Awareness Initiative (GPMAI) <span>+</span></div>
             <div class="accordion-content">
-                <p style="padding: 20px 0;">This national framework drives community sensitization and education. We run high school outreach projects, translate technical genomics information into accessible local languages, and run public workshops to debunk genetic myths across Nigeria.</p>
+                <p style="padding: 20px 0;">This national framework drives community sensitization and education around genomics and precision medicine. We run high school and university outreach projects, translate technical genomics information into accessible local languages, and host public workshops and media campaigns to debunk genetic myths and build informed understanding across Nigeria. The goal is to ensure that by the time genomic screening and precision treatment programmes reach a community, that community already understands what genomics is, why it matters, and how it can benefit their families — building the public trust and literacy that everything else depends on.</p>
             </div>
         </div>
 
         <div class="accordion-item" data-aos="fade-up">
             <div class="accordion-header" onclick="toggleAccordion(this)">Community Genomic & Disease Screening Programme (CGDSP) <span>+</span></div>
             <div class="accordion-content">
-                <p style="padding: 20px 0;">Direct molecular testing interventions targeting vulnerable populations. This framework provides screening data access channels for major health concerns including Sickle Cell Disease (SCD), specific hereditary cancers, and common metabolic health disorders.</p>
+                <p style="padding: 20px 0;">Direct molecular testing interventions targeting vulnerable and underserved populations. This framework provides accessible screening and referral pathways across a broad range of genetically-linked and hereditary health conditions — including hemoglobinopathies such as Sickle Cell Disease, hereditary cancer predispositions, inherited metabolic disorders, and other conditions with strong genetic components prevalent in Nigerian communities. As the programme matures, the screening panel is designed to expand further, incorporating pharmacogenomic testing and additional hereditary conditions based on community need, disease burden data, and partner laboratory capacity — rather than being limited to any single condition.</p>
             </div>
         </div>
 
         <div class="accordion-item" data-aos="fade-up">
             <div class="accordion-header" onclick="toggleAccordion(this)">Genomics Research & Innovation Programme (GRIP) <span>+</span></div>
             <div class="accordion-content">
-                <p style="padding: 20px 0;">The institutional engine supporting robust biomedical analysis. GRIP works to construct structured clinical sample biobanks, train data technicians in complex bioinformatics processing algorithms, and produce insights utilizing locally sourced African genomes.</p>
+                <p style="padding: 20px 0;">The institutional engine supporting robust biomedical analysis across all of Centre-GPMI's work. GRIP works to construct structured clinical sample biobanks, train data technicians and researchers in bioinformatics and computational genomics, and generate insights using locally sourced African genomic data — addressing the significant global underrepresentation of African populations in genomic research. Over time, GRIP is intended to expand into pharmacogenomics research (matching medications to genetic profiles) and support research training fellowships for early-career African scientists.</p>
             </div>
         </div>
 
         <div class="accordion-item" data-aos="fade-up">
             <div class="accordion-header" onclick="toggleAccordion(this)">Health Policy & Advocacy Programme (HPAP) <span>+</span></div>
             <div class="accordion-content">
-                <p style="padding: 20px 0;">Bridging the gap between scientific evidence and state guidance. HPAP translates molecular data metrics into actionable policy briefs to advise the Federal Ministry of Health and create institutional ethical safety blueprints.</p>
+                <p style="padding: 20px 0;">Bridging the gap between scientific evidence and state guidance. HPAP translates research findings and screening data into actionable policy briefs to advise the Federal Ministry of Health and relevant state health authorities, and works to establish institutional ethical and safety frameworks for genomic data use in Nigeria — including alignment with the Nigeria Data Protection Regulation (NDPR). The programme also engages with regulatory bodies to help shape a policy environment where genomic medicine can scale safely and equitably across the country.</p>
             </div>
         </div>
     </div>
