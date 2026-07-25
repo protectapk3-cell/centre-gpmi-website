@@ -20,13 +20,33 @@
         nav a:hover { color: #00d4b2; }
         .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; position: relative; z-index: 2; }
         h1 { text-align: center; color: #0a2540; margin-bottom: 40px; }
+        h2 { color: #0a2540; margin-bottom: 20px; }
+
+        .intro-box { background: rgba(255, 255, 255, 0.95); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; margin-bottom: 40px; }
+        .intro-img { width: 100%; height: 260px; object-fit: cover; display: block; }
+        .intro-body { padding: 35px; }
+        .intro-body p { color: #444; margin-bottom: 15px; }
+        .intro-body p:last-child { margin-bottom: 0; }
+
+        .box { background: rgba(255, 255, 255, 0.95); padding: 35px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .theme-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; list-style: none; margin-top: 10px; }
+        .theme-item { background: #f4f7f6; padding: 15px; border-radius: 6px; border-left: 4px solid #00d4b2; }
+        .theme-item strong { color: #0a2540; }
+
+        .priority-list { list-style: none; margin-top: 10px; }
+        .priority-list li { padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid #eee; }
+        .priority-list li:last-child { border-bottom: none; }
+        .priority-list li::before { content: "✓"; position: absolute; left: 0; color: #00d4b2; font-weight: bold; }
+
         .pub-list { display: flex; flex-direction: column; gap: 20px; }
-        .pub-card { background: rgba(255, 255, 255, 0.95); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #00d4b2; display: flex; justify-content: space-between; align-items: center; }
+        .pub-card { background: rgba(255, 255, 255, 0.95); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #00d4b2; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
         .pub-info { max-width: 75%; }
         .pub-title { color: #0a2540; font-size: 20px; margin-bottom: 5px; }
         .pub-authors { color: #666; font-style: italic; font-size: 14px; margin-bottom: 10px; }
         .pub-meta { font-size: 13px; color: #888; }
         .btn-download { background-color: #0a2540; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 14px; }
+        .pub-note { text-align: center; color: #777; font-style: italic; padding: 20px; }
+
         footer { background-color: #0a2540; color: white; padding: 40px 20px; text-align: center; margin-top: 60px; }
     </style>
 </head>
@@ -45,15 +65,48 @@
     </header>
     <div class="container">
         <h1 data-aos="fade-down">Research & Publications</h1>
-        <div class="pub-list">
-            <div class="pub-card" data-aos="fade-up">
-                <div class="pub-info">
-                    <h3 class="pub-title">Precision Medicine Frameworks for West African Populations</h3>
-                    <p class="pub-authors">Centre-GPMI Research Team</p>
-                    <p class="pub-meta">Published in: African Journal of Genomics • Year: 2026</p>
-                </div>
-                <a href="#" class="btn-download" download>Download PDF</a>
+
+        <div class="intro-box" data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1576091160651-e028ca26a943?fm=jpg&q=60&w=1600&auto=format&fit=crop" alt="Centre-GPMI Research" class="intro-img">
+            <div class="intro-body">
+                <p>Centre-GPMI conducts and supports research at the intersection of genomics, precision medicine, and public health, with a focus on generating evidence relevant to African populations — a population significantly underrepresented in global genomic research. Our research programme is designed to build the local evidence base needed to make precision medicine work for Nigerian and African patients specifically, not just adapt findings generated elsewhere.</p>
             </div>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+            <h2>Research Governance</h2>
+            <p>All research undertaken by or through Centre-GPMI adheres to rigorous ethical and scientific standards:</p>
+            <ul class="priority-list">
+                <li>Ethics approval is obtained from accredited Health Research Ethics Committees (including NHREC and partner institutional HRECs) prior to any human-subjects research.</li>
+                <li>Laboratory analyses are conducted through partnerships with accredited reference laboratories under formal agreements.</li>
+                <li>Research design and oversight are guided by our Scientific Advisory Board.</li>
+                <li>All research activities align with the Nigeria Data Protection Regulation (NDPR) and international standards for genomic data privacy.</li>
+            </ul>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+            <h2>Research Focus Areas</h2>
+            <ul class="theme-list">
+                <li class="theme-item"><strong>Population Genomics</strong> — Generating genomic and hereditary disease data representative of Nigerian and West African populations.</li>
+                <li class="theme-item"><strong>Precision Medicine</strong> — Translating genetic findings into individualized diagnostic and treatment approaches.</li>
+                <li class="theme-item"><strong>Public Health Genomics</strong> — Studying community knowledge, attitudes, and access barriers around genomic health services.</li>
+                <li class="theme-item"><strong>Pharmacogenomics & Biobanking</strong> — Foundational work toward matching medications to genetic profiles and building biobank infrastructure for future research.</li>
+            </ul>
+        </div>
+
+        <div class="box" data-aos="fade-up">
+            <h2>Current Research Priorities</h2>
+            <ul class="priority-list">
+                <li>Epidemiology, screening outcomes, and referral pathways for sickle cell disease and other hereditary hemoglobin disorders</li>
+                <li>Community knowledge, attitudes, and practices around genomic medicine and precision healthcare</li>
+                <li>Foundational studies supporting future pharmacogenomics and biobanking initiatives</li>
+                <li>Research partnerships to expand the evidence base for precision medicine across additional hereditary and genetically-linked conditions</li>
+            </ul>
+        </div>
+
+        <h2 data-aos="fade-up" style="text-align: center; margin-top: 10px;">Publications</h2>
+        <div class="pub-list" data-aos="fade-up">
+            <p class="pub-note">Centre-GPMI's first research publications and reports will be posted here as they are completed.</p>
         </div>
     </div>
     <footer><p>&copy; 2026 Centre-GPMI. All Rights Reserved.</p></footer>
